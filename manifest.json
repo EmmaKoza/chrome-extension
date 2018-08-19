@@ -1,0 +1,21 @@
+{
+  "name": "No Guys Allowed",
+  "description": "Replace the word 'guys' with the inclusive and gender neutral term, muggles. ",
+  "version": "1.0",
+  "manifest_version": 2,
+  "author": "Emma Koza",
+  "browser_action": {
+    "default_title": "No Guys Allowed"
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": [
+      "content.js"
+    ],
+    "run_at": "document_end"
+  }]
+}
+
