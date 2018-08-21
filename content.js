@@ -1,20 +1,17 @@
-const elements = document.body.querySelectorAll('p,form, button, li, em, a, h1, h2 ,h3, h4, h5, h6, strong, input, label, figcaption');
-const elementsArray = [...elements];
+const elements = document.body.querySelectorAll('p, form, button, li, em, a, h1, h2 ,h3, h4, h5, h6, strong, input, label, figcaption');
+const elementsArray = Array.from(elementsArray);
 
 const genderNeutralTerms = ['muggles', 'humans', 'people', 'peeps', 'chums', 'pals', 'beings'];
 
-const randomize = (array) =>{
-   return array[Math.floor(Math.random() * array.length)];
+const findRandomTerm = (termArray) =>{
+   return termArray[Math.floor(Math.random() * termArray.length)];
 }
-const updateWebPageText = (elementsArray) => {
-  elementsArray.forEach(element => {
-    const currentText = element.innerHTML;
-    const replacedText = currentText.replace(/guys/gi, (randomize(genderNeutralTerms)));
-    element.innerHTML = replacedText;
-  }); 
-};
 
-updateWebPageText(elementsArray);
+elementsArray.forEach(element => {
+  const currentText = element.innerHTML;
+  const replacedText = currentText.replace(/guys/gi, (findRandomTerm(genderNeutralTerms)));
+  element.innerHTML = replacedText;
+})
 
 
 
