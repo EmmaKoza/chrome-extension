@@ -1,5 +1,5 @@
 const elements = document.body.querySelectorAll('p, form, button, li, em, a, h1, h2 ,h3, h4, h5, h6, strong, input, label, figcaption');
-const elementsArray = Array.from(elementsArray);
+const elementsArray = Array.from(elements);
 
 const genderNeutralTerms = ['muggles', 'humans', 'people', 'peeps', 'chums', 'pals', 'beings'];
 
